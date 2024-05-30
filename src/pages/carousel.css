@@ -1,0 +1,34 @@
+.placeholder {
+  height: 200px;
+  width: 200px;
+
+}
+
+[data-current] {
+  z-index: 2;
+}
+
+.red {
+  background-color: red;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.green {
+  background-color: green;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.blue {
+  background-color: lightskyblue;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.image-wrapper {
+  position: relative;
+}

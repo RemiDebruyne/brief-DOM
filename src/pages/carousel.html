@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="carousel.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Carousel</h1>
+        <div class="carousel">
+            <div class="image-wrapper">
+                <div class="placeholder red" data-current></div>
+                <div class="placeholder blue"></div>
+                <div class="placeholder green"></div>
+            </div>
+            <div class="button-wrapper">
+                <button id="previous">previous</button>
+                <button onclick="nextPicture()" id="next">next</button>
+            </div>
+        </div>
+    </div>
+    <a href="./index.html">Menu</a>
+</body>
+<script src="carousel.js"></script>
+
+</html>

@@ -41,14 +41,17 @@ document
     () => (victoryScore = document.getElementById("score-setter").value)
   );
 
+// add point to p1
 document
   .getElementById("p1")
   .addEventListener("click", () => givePoint(player1));
 
+//add point to p2
 document
   .getElementById("p2")
   .addEventListener("click", () => givePoint(player2));
 
+// update victory score state's
 document
   .getElementById("score-setter")
   .addEventListener("blur", () => startGame(victoryScore));

@@ -1,4 +1,6 @@
+// let victoryScore = document.getElementById("score-setter").value;
 let victoryScore = document.getElementById("score-setter").value;
+
 let title = document.querySelector("h1");
 
 let player1 = {
@@ -12,19 +14,7 @@ let player2 = {
 };
 
 function startGame(victoryScore) {
-  title.innerHTML = `Le nombre de point pour gagner est ${victoryScore}`;
-}
-
-function givePoint(player) {
-  player.point++;
-  let elem = document.getElementById(player.name);
-  elem.innerHTML = `${player.point} `;
-  if (player.point > victoryScore) {
-    elem.setAttribute("class", "winner");
-  }
-}
-
-function resetGame() {
+  title.innerHTML = `Playing to ${victoryScore}`;
   player1.point = 0;
   player2.point = 0;
   let s = document.querySelectorAll("span");
@@ -32,8 +22,24 @@ function resetGame() {
     span.innerHTML = "0";
     span.removeAttribute("class");
   }
-  title.innerHTML = "Pour quel score jouons nous ?";
 }
+
+function givePoint(player) {
+  player.point++;
+  let elem = document.getElementById(player.name);
+  elem.innerHTML = `${player.point} `;
+  if (player.point >= victoryScore) {
+    elem.setAttribute("class", "winner");
+  }
+}
+
+// update victory score state when the input changes
+document
+  .getElementById("score-setter")
+  .addEventListener(
+    "blur",
+    () => (victoryScore = document.getElementById("score-setter").value)
+  );
 
 document
   .getElementById("p1")
@@ -45,6 +51,4 @@ document
 
 document
   .getElementById("score-setter")
-  .addEventListener("blur", () =>
-    startGame(document.getElementById("score-setter").value)
-  );
+  .addEventListener("blur", () => startGame(victoryScore));

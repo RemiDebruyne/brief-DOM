@@ -4,13 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./sass/styles.css">
     <title>Accueil</title>
 </head>
 
 <body>
-    <a href="./src/pages/carousel.html">Carousel</a>
-    <a href="./src/pages/todo-list.html">Todo list</a>
-    <a href="./src/pages/score.html">Score</a>
+    <div class="column-wrapper">
+        <div class="row-wrapper">
+            <a href="./src/pages/carousel.html" id="carousel">CAROUSEL</a>
+            <span id="test" class="default-state"></span>
+        </div>
+        <div class="row-wrapper">
+            <a href="./src/pages/todo-list.html" id="todo">TODO LIST</a>
+            <span class="default-state"></span>
+        </div>
+        <div class="row-wrapper">
+            <a href="./src/pages/score.html" id="score">SCORE</a>
+            <span class="default-state"></span>
+        </div>
+    </div>
 </body>
 
 </html>
